@@ -9,13 +9,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class EditBookComponent implements OnInit {
   @Input() book: Book;
   @Output() updateABookEvent = new EventEmitter();
-bookEdit: Book = new Book();
+  bookEdit: Book = new Book();
   constructor() { }
 
   ngOnInit() {
+    Object.assign(this.bookEdit, this.book);
   }
-  update(){
+  update() {
     this.bookEdit.editable = false;
-    this.updateABookEvent.emit({original: this.book, edited:this.bookEdit});
-}
+    this.updateABookEvent.emit({ original: this.book, edited: this.bookEdit });
+  }
 }

@@ -1,3 +1,6 @@
-<p>
-  edit-book works!
-</p>
+<form (submit)="update()">
+    <input type="text" name="title" [(ngModel)]="bookEdit.title">
+    <input type="text" name="author" [(ngModel)]="bookEdit.author">
+    <input type="text" name="date" [(ngModel)]="bookEdit.date">
+    <input type="submit">
+  </form>
