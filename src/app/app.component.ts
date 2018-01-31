@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { Http, Response } from '@angular/http';
 
 @Component({
-  title:"my books manager",
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements ngOnInit {
+export class AppComponent implements OnInit {
+  title = 'my books manager';
   books: Object[];
 
-  constructor(private http:Http) {}
-
+  constructor(private http: Http) { }
   ngOnInit() {
-      this.http.get('books-mock.json').subscribe(res => {
+    this.http.get('.assets/books-mock.json').subscribe(res => {
       this.books = res.json();
     });
   }
