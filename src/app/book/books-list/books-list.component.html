@@ -1,3 +1,6 @@
-<p>
-  books-list works!
-</p>
+<div *ngFor="let book of books">
+  {{book.title}} - {{book.author}} -{{book.date}}
+  <button (click)="delete(book)">Delete A Book</button>
+  <button (click)="book.editable = !book.editable">Edit</button>
+<app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book>
+</div>

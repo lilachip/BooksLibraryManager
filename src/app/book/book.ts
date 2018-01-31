@@ -3,6 +3,7 @@ export class Book {
     public id: string = '',
     public title: string = '',
     public author: string = '',
-    public date: string = ''
+    public date: string = '',
+    public editable: boolean = false
   ) {}
 }

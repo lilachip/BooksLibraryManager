@@ -1,3 +1,6 @@
-<p>
-  new-book works!
-</p>
+<form (submit)="create()">
+    <input type="text" name="title" [(ngModel)]="newBook.title">
+    <input type="text" name="author" [(ngModel)]="newBook.author">
+    <input type="text" name="date" [(ngModel)]="newBook.date">
+    <input type="submit">
+  </form>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Book } from '../book';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-edit-book',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-book.component.css']
 })
 export class EditBookComponent implements OnInit {
-
+  @Input() book: Book;
+  @Output() updateABookEvent = new EventEmitter();
+bookEdit: Book = new Book();
   constructor() { }
 
   ngOnInit() {
   }
-
+  update(){
+    this.bookEdit.editable = false;
+    this.updateABookEvent.emit({original: this.book, edited:this.bookEdit});
+}
 }
