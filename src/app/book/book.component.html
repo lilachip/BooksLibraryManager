@@ -1,4 +1,4 @@
-{{ books| json}}
+<!-- {{ books| json}} -->
 <app-new-book (createNewBookEvent)="create($event)"></app-new-book>
 <app-books-list [books]="books"
 (deleteABookEvent)="delete($event)"
