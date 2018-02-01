@@ -10,9 +10,12 @@ import { BookService } from './book.service';
 
 export class BookComponent implements OnInit {
   books: Array<Book> = [
-    new Book('1', 'First', 'some author 1', '1998'),
-    new Book('2', 'second', 'some author 2', '1998'),
-    new Book('3', 'Third', 'some author 3', '1888')
+    new Book('1', 'Adventures-of-Huckleberry', 'some author 1', '1998', false, '/src/assets/images/Adventures-of-Huckleberry-01.jpg'),
+    new Book('2', 'second', 'some author 2', '1998', false, '/src/assets/images/Haruki-08.jpg'),
+    new Book('3', 'catch-22', 'some author 3', '1888', false, '/src/assets/images/catch-22-05.jpg'),
+    new Book('4', 'Joseph-Conrad-', 'some author 1', '1998', false, '/src/assets/images/Joseph-Conrad-004.jpg'),
+    new Book('5', 'Middlemarch', 'some author 2', '1998', false, '/src/assets/images/Middlemarch--003.jpg'),
+    new Book('6', 'Ulysses', 'some author 3', '1888', false, '/src/assets/images/Ulysses-002.jpg')
   ];
   constructor(private _bookService: BookService) { }
 

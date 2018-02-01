@@ -1,12 +1,20 @@
 <ul class="list-group">
   <li *ngFor="let book of books" class="list-group-item">
+    <div class="row">
+<div class="col-md-3">
+ <img class="img-responsive" src={{book.img}} />
+</div>
+<div class="col-md-3">
       <span> {{ book.title }} </span>
   <br>
       <span> {{ book.author }} </span>
   <br>
   <span> {{ book.date }} </span>
-      <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
+  <br>
+  <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
       <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
       <app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book>
+    </div>
+    </div>
     </li>
 </ul>

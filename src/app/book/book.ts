@@ -4,6 +4,7 @@ export class Book {
     public title: string = '',
     public author: string = '',
     public date: string = '',
-    public editable: boolean = false
+    public editable: boolean = false,
+    public img: string = '',
   ) {}
 }
