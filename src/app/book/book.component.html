@@ -1,6 +1,8 @@
 <!-- {{ books| json}} -->
-<app-new-book (createNewBookEvent)="create($event)"></app-new-book>
+<div class="container-fluid">
 <app-books-list [books]="books"
 (deleteABookEvent)="delete($event)"
 (updateABookEvent)="update($event)">
 </app-books-list>
+<app-new-book (createNewBookEvent)="create($event)"></app-new-book>
+</div>

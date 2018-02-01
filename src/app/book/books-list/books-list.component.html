@@ -1,7 +1,12 @@
-<div *ngFor="let book of books">
-  {{book.title}} - {{book.author}} -{{book.date}}
-  <button (click)="delete(book)">Delete A Book</button>
-  <!-- class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" -->
-  <button (click)="book.editable = !book.editable">Edit</button>
-<app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book>
-</div>
+<ul class="list-group">
+  <li *ngFor="let book of books" class="list-group-item">
+      <span> {{ book.title }} </span>
+  <br>
+      <span> {{ book.author }} </span>
+  <br>
+  <span> {{ book.date }} </span>
+      <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
+      <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
+      <app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book>
+    </li>
+</ul>
