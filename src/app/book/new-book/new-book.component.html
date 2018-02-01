@@ -1,6 +1,9 @@
 <form (submit)="create()">
-    <input type="text" name="title" [(ngModel)]="newBook.title">
-    <input type="text" name="author" [(ngModel)]="newBook.author">
-    <input type="text" name="date" [(ngModel)]="newBook.date">
+    <input type="text" name="title" [(ngModel)]="newBook.title" ng-pattern ="/^[a-zA-Z\s]*$/" ng-model="title" required>
+    <input type="text" name="author" [(ngModel)]="newBook.author"ng-pattern ="/^[a-zA-Z\s]*$/" ng-model="author" required>
+    <input type="text" name="date" [(ngModel)]="newBook.date" class="form-control" placeholder="YYYY/MM/DD"
+    data-fv-date="true"
+    data-fv-date-format="YYYY/MM/DD"
+    data-fv-date-message="The value is not a valid date" >
     <input type="submit">
   </form>

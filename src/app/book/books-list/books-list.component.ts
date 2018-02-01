@@ -16,7 +16,10 @@ export class BooksListComponent implements OnInit {
   ngOnInit() {
   }
   delete(book: Book) {
+    let result = confirm('Are You Sure You want to delete that book?');
+    if (result) {
     this.deleteABookEvent.emit(book);
+    }
   }
 
   update(books) {
