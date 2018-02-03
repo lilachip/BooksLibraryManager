@@ -19,7 +19,7 @@ export class BookService {
 }
 
   addBook(book: Book) {
-    return this.http.post('/books', book).map(data => data.json()).toPromise();
+    return this.http.post('/books', book).map(data => data.toString());
   }
 
   deleteBook(book: Book) {
@@ -41,7 +41,7 @@ export class BookService {
   // }
 
   getABook(book: Book) {
-    return this._http.get('/books' + book.id).map(data => data.json()).toPromise();
+    return this.http.get('/books' + book.id).map(data => data.json()).toPromise();
   }
 
 }
