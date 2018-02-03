@@ -8,7 +8,8 @@ import { BookDetailsComponent } from './book/book-details/book-details.component
 import { NewBookComponent } from './book/new-book/new-book.component';
 import { EditBookComponent } from './book/edit-book/edit-book.component';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+// import {PopupModule} from 'ng2-opd-popup';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
+    // PopupModule.forRoot()
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

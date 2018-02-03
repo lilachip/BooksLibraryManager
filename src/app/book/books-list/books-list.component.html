@@ -5,15 +5,16 @@
  <img class="img-responsive" src={{book.img}} />
 </div>
 <div class="col-md-3">
-      <span> {{ book.title }} </span>
+    <!-- class="capitalize"     -->
+  <span style=" text-transform: capitalize"> {{ book.title }} </span>
   <br>
       <span> {{ book.author }} </span>
   <br>
   <span> {{ book.date }} </span>
   <br>
   <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
-      <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
-      <app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book>
+      <!-- <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
+      <app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book> -->
     </div>
     </div>
     </li>
