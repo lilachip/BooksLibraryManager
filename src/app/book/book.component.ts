@@ -11,8 +11,9 @@ import { BookService } from './book.service';
 
 export class BookComponent implements OnInit {
 // book:Book;
-  //  , popup:PopupModule
+  // popup;
   books;
+  // , private popup: PopupModule
   constructor(private _bookService: BookService) {
   }
 
@@ -31,7 +32,10 @@ export class BookComponent implements OnInit {
     // this.getBooks();
   });
 }
-  create(book: Book) {
+// openPopup(popup){
+//   this.popup.show();
+// }
+create(book: Book) {
     this.books.push(book);
   }
   delete(book: Book) {
@@ -43,6 +47,7 @@ export class BookComponent implements OnInit {
     console.log(books);
     const i = this.books.indexOf(books.original);
     this.books[i] = books.edited;
+    // this.popup.show();
   }
   getBooks() {
     // this._bookService.getBooks()
