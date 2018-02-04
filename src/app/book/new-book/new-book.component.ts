@@ -1,7 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Book } from '../book';
-// import { BookService } from '../book.service';
-
+import { BookService } from '../book.service';
 
 @Component({
   selector: 'app-new-book',
@@ -10,13 +9,12 @@ import { Book } from '../book';
 })
 export class NewBookComponent implements OnInit {
   newBook = new Book();
-  // books;
+  books;
   @Output() createNewBookEvent = new EventEmitter();
-  // private _bookService: BookService
-  constructor() {
-    // this._bookService.getJSON().subscribe(data => {
-    //   this.books = data.Books;
-    // });
+  constructor(private _bookService: BookService) {
+    this._bookService.getJSON().subscribe(data => {
+      this.books = data.Books;
+    });
   }
 
   ngOnInit() {
@@ -24,5 +22,7 @@ export class NewBookComponent implements OnInit {
   create(){
     this.createNewBookEvent.emit(this.newBook);
     this.newBook = new Book();
+this.books.push(this.newBook);
+    console.log(this.newBook);
   }
 }
