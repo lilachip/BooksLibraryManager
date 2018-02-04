@@ -17,15 +17,15 @@ export class BookComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._bookService.getJSON().subscribe(data => {
-      this.books = data;
-      let index = 0;
-      for (index; index < this.books.length; index++) {
-          let book = this.books.length[index];
-          console.log(book);
-      }
-    console.log(this.books);
-  });
+  //   this._bookService.getJSON().subscribe(data => {
+  //     this.books = JSON.parse(data);
+  //     let index = 0;
+  //     for (index; index < this.books.length; index++) {
+  //         let book = this.books.length[index];
+  //         console.log(book);
+  //     }
+  //   console.log(this.books);
+  // });
     // this.getBooks();
   }
   create(book: Book) {

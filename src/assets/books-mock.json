@@ -1,28 +1,36 @@
 {
   "Books": [
     {
+      "Id":"1",
       "Title" : "The Lightning Thief",
       "Author" : "Rick Riordan",
       "Date": "1988",
-      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX300.jpg"
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX300.jpg",
+      "Editable": false
     },
     {
+      "Id":"2",
       "Title":  "The Sea of Monsters",
       "Author" : "Rick Riordan",
       "Date": "1908",
-      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMDczMTA5N15BMl5BanBnXkFtZTcwMzk1MzMzMw@@._V1_SX300.jpg"
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMDczMTA5N15BMl5BanBnXkFtZTcwMzk1MzMzMw@@._V1_SX300.jpg",
+      "Editable": false
     },
     {
+      "Id":"3",
       "Title":  "Sophie's World : The Greek Philosophers",
       "Author" : "Jostein Gaarder",
       "Date": "1999",
-      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMGEzZjdjMGQtZmYzZC00N2I4LThiY2QtNWY5ZmQ3M2ExZmM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMGEzZjdjMGQtZmYzZC00N2I4LThiY2QtNWY5ZmQ3M2ExZmM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Editable": false
     },
     {
+      "Id":"4",
       "Title": "Lucene in Action, Second Edition",
       "Author" : "Michael McCandless",
       "Date": "1998",
-      "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxYjU1OTUtYjRiOC00NDg2LWI4MWUtZGU5YzdkYTcwNTBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxYjU1OTUtYjRiOC00NDg2LWI4MWUtZGU5YzdkYTcwNTBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Editable": false
     }
   ]
 }

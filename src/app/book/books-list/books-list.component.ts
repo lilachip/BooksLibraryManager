@@ -11,20 +11,24 @@ export class BooksListComponent implements OnInit {
   @Input() books;
   @Output() deleteABookEvent = new EventEmitter();
   @Output() updateABookEvent = new EventEmitter();
-  private bookService:BookService;
-  constructor() { }
+
+  constructor(private _bookService: BookService) { }
 
   ngOnInit() {
-    this.books =this.bookService.getJSON();
-  }
-  delete(book: Book) {
-    const result = confirm('Are You Sure You want to delete that book?');
-    if (result) {
-    this.deleteABookEvent.emit(book);
-    }
-  }
+    this._bookService.getJSON().subscribe(data => {
+    this.books = data.Books;
+    console.log(this.books);
+    console.log(data);
+});
+}
+  // delete(book: Book) {
+  //   const result = confirm('Are You Sure You want to delete that book?');
+  //   if (result) {
+  //   this.deleteABookEvent.emit(book);
+  //   }
+  // }
 
-  update(books) {
-    this.updateABookEvent.emit(books);
-  }
+  // update(books) {
+  //   this.updateABookEvent.emit(books);
+  // }
 }
