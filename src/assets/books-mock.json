@@ -2,34 +2,66 @@
   "Books": [
     {
       "Id":"1",
-      "Title" : "The Lightning Thief",
+      "Title" : "Adventures of Huckleberry",
       "Author" : "Rick Riordan",
       "Date": "1988",
-      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX300.jpg",
+      "Cover": "images/Adventures-of-Huckleberry-01.jpg",
       "Editable": false
     },
     {
       "Id":"2",
-      "Title":  "The Sea of Monsters",
+      "Title":  "catch 22",
       "Author" : "Rick Riordan",
       "Date": "1908",
-      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMDczMTA5N15BMl5BanBnXkFtZTcwMzk1MzMzMw@@._V1_SX300.jpg",
+      "Cover": "./images/catch-22-05.jpg",
       "Editable": false
     },
     {
       "Id":"3",
-      "Title":  "Sophie's World : The Greek Philosophers",
-      "Author" : "Jostein Gaarder",
+      "Title":  "what i'm talking when i'm talking about running",
+      "Author" : "Haruki murakami",
       "Date": "1999",
-      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMGEzZjdjMGQtZmYzZC00N2I4LThiY2QtNWY5ZmQ3M2ExZmM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Cover": "./images/Haruki-08.jpg",
       "Editable": false
     },
     {
       "Id":"4",
-      "Title": "Lucene in Action, Second Edition",
+      "Title": "lucene in action, second edition",
       "Author" : "Michael McCandless",
       "Date": "1998",
-      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxYjU1OTUtYjRiOC00NDg2LWI4MWUtZGU5YzdkYTcwNTBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Cover": "./images/Joseph-Conrad-004.jpg",
+      "Editable": false
+    },
+    {
+      "Id":"5",
+      "Title" : "Middlemarch",
+      "Author" : "Rick Riordan",
+      "Date": "1988",
+      "Cover": "./images/Middlemarch--003.jpg",
+      "Editable": false
+    },
+    {
+      "Id":"6",
+      "Title":  "Roughing",
+      "Author" : "Rick Riordan",
+      "Date": "1908",
+      "Cover": "./images/Roughing-007JPG.jpg",
+      "Editable": false
+    },
+    {
+      "Id":"7",
+      "Title":  "Ulysses",
+      "Author" : "Jostein Gaarder",
+      "Date": "1999",
+      "Cover": "./images/Ulysses-002.jpg",
+      "Editable": false
+    },
+    {
+      "Id":"8",
+      "Title": "Wutherine-heights",
+      "Author" : "Michael McCandless",
+      "Date": "1998",
+      "Cover": "./images/Wutherine-heights-06.jpg",
       "Editable": false
     }
   ]
