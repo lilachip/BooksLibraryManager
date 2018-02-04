@@ -9,7 +9,7 @@
   <br>
       <span> {{ book.Author }} </span>
   <br>
-  <span> {{ book.Date }} </span>
+  <span> {{ book.Date | date : "yyyy"}} </span>
   <br>
   <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
       <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
