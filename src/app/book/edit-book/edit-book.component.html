@@ -18,8 +18,8 @@
     </div>
   </div> -->
   <form (submit)="update()" novalidate>
-      <input type="text" name="title" [(ngModel)]="bookEdit.title" ng-pattern ="/^[a-zA-Z\s]*$/" ng-model="Title" required class="form-control">
-      <input type="text" name="author" [(ngModel)]="bookEdit.author" ng-pattern ="/^[a-zA-Z\s]*$/" ng-model="Author" required class="form-control">
-      <input type="date" name="date" [(ngModel)]="bookEdit.date" required class="form-control">
+      <input type="text" name="title" [(ngModel)]="bookEdit.Title" ng-pattern ="/^[a-zA-Z\s]*$/" ng-model="Title" required class="form-control">
+      <input type="text" name="author" [(ngModel)]="bookEdit.Author" ng-pattern ="/^[a-zA-Z\s]*$/" ng-model="Author" required class="form-control">
+      <input type="date" name="date" [(ngModel)]="bookEdit.Date" required class="form-control">
       <input type="submit">
     </form>
