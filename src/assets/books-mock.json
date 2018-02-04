@@ -5,7 +5,7 @@
       "Title" : "Adventures of Huckleberry",
       "Author" : "Rick Riordan",
       "Date": "1988",
-      "Cover": "images/Adventures-of-Huckleberry-01.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxYjU1OTUtYjRiOC00NDg2LWI4MWUtZGU5YzdkYTcwNTBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "Editable": false
     },
     {
@@ -13,7 +13,7 @@
       "Title":  "catch 22",
       "Author" : "Rick Riordan",
       "Date": "1908",
-      "Cover": "./images/catch-22-05.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMGEzZjdjMGQtZmYzZC00N2I4LThiY2QtNWY5ZmQ3M2ExZmM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "Editable": false
     },
     {
@@ -21,7 +21,7 @@
       "Title":  "what i'm talking when i'm talking about running",
       "Author" : "Haruki murakami",
       "Date": "1999",
-      "Cover": "./images/Haruki-08.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMDczMTA5N15BMl5BanBnXkFtZTcwMzk1MzMzMw@@._V1_SX300.jpg",
       "Editable": false
     },
     {
@@ -29,7 +29,7 @@
       "Title": "lucene in action, second edition",
       "Author" : "Michael McCandless",
       "Date": "1998",
-      "Cover": "./images/Joseph-Conrad-004.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg4MDk1ODExN15BMl5BanBnXkFtZTgwNzIyNjg3MDE@._V1_SX300.jpg",
       "Editable": false
     },
     {
@@ -37,7 +37,7 @@
       "Title" : "Middlemarch",
       "Author" : "Rick Riordan",
       "Date": "1988",
-      "Cover": "./images/Middlemarch--003.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxYjU1OTUtYjRiOC00NDg2LWI4MWUtZGU5YzdkYTcwNTBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "Editable": false
     },
     {
@@ -45,7 +45,7 @@
       "Title":  "Roughing",
       "Author" : "Rick Riordan",
       "Date": "1908",
-      "Cover": "./images/Roughing-007JPG.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMGEzZjdjMGQtZmYzZC00N2I4LThiY2QtNWY5ZmQ3M2ExZmM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "Editable": false
     },
     {
@@ -53,7 +53,7 @@
       "Title":  "Ulysses",
       "Author" : "Jostein Gaarder",
       "Date": "1999",
-      "Cover": "./images/Ulysses-002.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMzQxYjU1OTUtYjRiOC00NDg2LWI4MWUtZGU5YzdkYTcwNTBlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
       "Editable": false
     },
     {
@@ -61,7 +61,7 @@
       "Title": "Wutherine-heights",
       "Author" : "Michael McCandless",
       "Date": "1998",
-      "Cover": "./images/Wutherine-heights-06.jpg",
+      "Cover": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTgxMDczMTA5N15BMl5BanBnXkFtZTcwMzk1MzMzMw@@._V1_SX300.jpg",
       "Editable": false
     }
   ]

@@ -17,18 +17,20 @@ export class BooksListComponent implements OnInit {
   ngOnInit() {
     this._bookService.getJSON().subscribe(data => {
     this.books = data.Books;
+    // let book = this._bookService.book;
     console.log(this.books);
     console.log(data);
+    // console.log(book);
 });
 }
-  // delete(book: Book) {
-  //   const result = confirm('Are You Sure You want to delete that book?');
-  //   if (result) {
-  //   this.deleteABookEvent.emit(book);
-  //   }
-  // }
+  delete(book: Book) {
+    const result = confirm('Are You Sure You want to delete that book?');
+    if (result) {
+    this.deleteABookEvent.emit(book);
+    }
+  }
 
-  // update(books) {
-  //   this.updateABookEvent.emit(books);
-  // }
+  update(books) {
+    this.updateABookEvent.emit(books);
+  }
 }

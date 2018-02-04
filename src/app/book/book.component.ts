@@ -10,13 +10,15 @@ import { BookService } from './book.service';
 })
 
 export class BookComponent implements OnInit {
-
+// book:Book;
   //  , popup:PopupModule
   books;
   constructor(private _bookService: BookService) {
   }
 
   ngOnInit() {
+    this._bookService.getJSON().subscribe(data => {
+      this.books = data.Books;
   //   this._bookService.getJSON().subscribe(data => {
   //     this.books = JSON.parse(data);
   //     let index = 0;
@@ -27,7 +29,8 @@ export class BookComponent implements OnInit {
   //   console.log(this.books);
   // });
     // this.getBooks();
-  }
+  });
+}
   create(book: Book) {
     this.books.push(book);
   }

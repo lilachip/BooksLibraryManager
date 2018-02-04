@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Book } from '../book';
+// import { BookService } from '../book.service';
+
 
 @Component({
   selector: 'app-new-book',
@@ -8,8 +10,14 @@ import { Book } from '../book';
 })
 export class NewBookComponent implements OnInit {
   newBook = new Book();
+  // books;
   @Output() createNewBookEvent = new EventEmitter();
-  constructor() { }
+  // private _bookService: BookService
+  constructor() {
+    // this._bookService.getJSON().subscribe(data => {
+    //   this.books = data.Books;
+    // });
+  }
 
   ngOnInit() {
   }

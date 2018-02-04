@@ -2,19 +2,19 @@
   <li *ngFor="let book of books" class="list-group-item">
     <div class="row">
 <div class="col-md-3">
- <img class="img-responsive" src={{book.img}} />
+ <img class="img-responsive" src={{book.Cover}} />
 </div>
 <div class="col-md-3">
     <!-- class="capitalize"     -->
-<span style=" text-transform: capitalize"> {{book.title }} </span>
+<span style=" text-transform: capitalize"> {{book.Title }} </span>
   <br>
-      <span> {{ book.author }} </span>
+      <span> {{ book.Author }} </span>
   <br>
-  <span> {{ book.date }} </span>
+  <span> {{ book.Date }} </span>
   <br>
-  <!-- <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span> -->
-      <!-- <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
-      <app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book> -->
+  <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
+      <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
+      <app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book>
     </div>
     </div>
     </li>
