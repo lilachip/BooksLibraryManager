@@ -26,4 +26,12 @@ h4{
 }
 .glyphicon-search{
   color: white;
+  margin-top: 8px;
+}
+.searchArea{
+  margin-top:8px;
+}
+.form-control{
+  background: transparent;
+  color: white;
 }

@@ -5,13 +5,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { PopupModule } from "ng2-opd-popup";
 
 @Injectable()
 export class BookService {
   // book: Book;
   books;
   book;
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient, private popup: PopupModule) {
     this.getJSON().subscribe(data => {
       let index = 0;
       for (index; index < data.Books.length; index++) {
@@ -24,6 +25,8 @@ export class BookService {
     console.log(this.book);
 });
   }
+
+
   public createAbook(data): Book {
     let book = new Book();
     book.id = data['Id'];
@@ -67,4 +70,7 @@ export class BookService {
     // return this.http.get('/books' + book.id).map(data => data.json()).toPromise();
   }
 
+  // openDialog() {
+  //   this.popup.();
+  //   }
 }
