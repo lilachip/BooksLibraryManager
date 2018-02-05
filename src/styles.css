@@ -16,3 +16,7 @@ h4{
 margin: 6px;
 padding:8px
 } */
+.header{
+  min-height: 200px;
+  /* background-image: "assets/images/a-book-a-week-image.jpg" */
+}
