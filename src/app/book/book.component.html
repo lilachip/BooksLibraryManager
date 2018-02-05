@@ -5,8 +5,11 @@
 (updateABookEvent)="update($event)">
 </app-books-list>
   </div>
-<!-- <popup></popup>
-<button (click)="openPopup()">open popup</button> -->
+  <div>
+      <popup>
+          Wrong password please try again </popup>
+          <button (click)="openDialog()"> open popUp</button>
+      </div>
 <div class="col-md-6">
 <app-new-book (createNewBookEvent)="create($event)"></app-new-book>
 </div>

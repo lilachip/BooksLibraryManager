@@ -23,6 +23,7 @@ export class BooksListComponent implements OnInit {
     // console.log(book);
 });
 }
+
   delete(book: Book) {
     const result = confirm('Are You Sure You want to delete that book?');
     if (result) {

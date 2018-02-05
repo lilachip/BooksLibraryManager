@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from './book';
 import { BookService } from './book.service';
-// import {PopupModule} from 'ng2-opd-popup';
+import {PopupModule} from 'ng2-opd-popup';
 
 @Component({
   selector: 'app-book',
@@ -13,28 +13,17 @@ export class BookComponent implements OnInit {
 // book:Book;
   // popup;
   books;
-  // , private popup: PopupModule
-  constructor(private _bookService: BookService) {
-  }
 
+  constructor(private _bookService: BookService, private popup: PopupModule) {}
   ngOnInit() {
     this._bookService.getJSON().subscribe(data => {
       this.books = data.Books;
-  //   this._bookService.getJSON().subscribe(data => {
-  //     this.books = JSON.parse(data);
-  //     let index = 0;
-  //     for (index; index < this.books.length; index++) {
-  //         let book = this.books.length[index];
-  //         console.log(book);
-  //     }
-  //   console.log(this.books);
-  // });
-    // this.getBooks();
   });
 }
-// openPopup(popup){
+// openDialog() {
 //   this.popup.show();
-// }
+//   }
+
 create(book: Book) {
     this.books.push(book);
   }
@@ -47,7 +36,6 @@ create(book: Book) {
     console.log(books);
     const i = this.books.indexOf(books.original);
     this.books[i] = books.edited;
-    // this.popup.show();
   }
   getBooks() {
     // this._bookService.getBooks()

@@ -17,14 +17,14 @@ export class BookService {
       for (index; index < data.Books.length; index++) {
           // let book = data.Books[index];
           // this.books.push(Book);
-      this.book = this.createAbook(data,Object);
+      this.book = this.createAbook(data);
       }
     // console.log(data.Books);
     // console.log(this.books);
     console.log(this.book);
 });
   }
-  public createAbook(data, Object): Book{
+  public createAbook(data): Book {
     let book = new Book();
     book.id = data['Id'];
     book.title = data['Title'];
@@ -37,6 +37,18 @@ export class BookService {
 
   public getJSON(): Observable<any> {
     return this.http.get('../assets/books-mock.json');
+    // .map(res => {
+    //   return res.json().books.map(book => {
+    //     return new Book (
+    //       book.id,
+    //       book.title,
+    //       book.author,
+    //       book.date,
+    //       book.img,
+    //       book.editable
+    //     );
+    //   });
+    // });
 }
 
   addBook(book: Book) {
@@ -50,16 +62,6 @@ export class BookService {
   editBook(book: Book) {
     // return this.http.put('/books/' + book.id, book).map(data => data.json()).toPromise();
   }
-  // :Observable<Book>
-  // '/src/books-mock.json'
-  // getBooks(): Promise<Book> {
-  //   return new Promise<Book>((resolve, reject) => {
-  //     this.http.get('/assets/books-mock.json').map(res => res.json()).subscribe(books => {
-  //       resolve(books);
-
-  //     });
-  //   });
-  // }
 
   getABook(book: Book) {
     // return this.http.get('/books' + book.id).map(data => data.json()).toPromise();
