@@ -16,3 +16,14 @@ h4{
   min-height: 200px;
   background-image: url("images/a-book-a-week-image.jpg");
 }
+.navbar-inverse{
+  height: 40px;
+  border-radius: 0px;
+}
+.navbar-brand{
+  margin-top:-10px;
+  margin-right:50px;
+}
+.glyphicon-search{
+  color: white;
+}
