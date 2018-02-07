@@ -9,9 +9,15 @@ import { NewBookComponent } from './book/new-book/new-book.component';
 import { EditBookComponent } from './book/edit-book/edit-book.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import {PopupModule} from 'ng2-opd-popup';
+//import {PopupModule} from 'ng2-opd-popup';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    //PopupModule.forRoot()
+  ],
   declarations: [
     BookComponent,
     AppComponent,
@@ -20,13 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     NewBookComponent,
     EditBookComponent
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    // PopupModule.forRoot()
-  ],
+
   providers: [BookService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

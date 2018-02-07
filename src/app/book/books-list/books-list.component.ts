@@ -26,8 +26,8 @@ export class BooksListComponent implements OnInit {
 //this.books = this._bookService.selectAllBooks();
 
 
-this._bookService.waitForBooksList((books) => {
-  this.books = books;
+this._bookService.waitForBooksList((data) => {
+  this.books = data.Books;
   console.log(this.books);
 });
 }
@@ -36,8 +36,7 @@ this._bookService.waitForBooksList((books) => {
     const result = confirm('Are You Sure You want to delete that book?');
     if (result) {
     //this.deleteABookEvent.emit(book);
-    this._bookService.deleteBook(this.books, book);
-    console.log(this.books);
+    this.books = this._bookService.deleteBook(book);
     }
   }
 

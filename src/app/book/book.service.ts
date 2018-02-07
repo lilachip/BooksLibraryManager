@@ -10,26 +10,11 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class BookService {
   book: Book;
-  //books;
+  data;
   whenBooksListReady: Function;
   // book;, public popup: PopupModule
   constructor(public http: HttpClient) {
-    /*this.getJSON().subscribe(data => {
-      this.books = data.Books;
-      //console.log(this.books);
-      //this.whenBooksListReady(this.books);
-      let index = 0;
-      for (; index < data.Books.length; index++) {
-          // this.books = data.Books;
-          // this.books.push(this.book);
-      // this.book = this.createAbook(data);
-      }
-    // console.log(data.Books);
-    // console.log(this.books);
-    //console.log(this.book);
 
-
-});
 }
 // OpenDialog() {
 //     this.popup.show();
@@ -61,6 +46,20 @@ export class BookService {
 
     public waitForBooksList(action: Function) { // waitForBooksList = function
       this.whenBooksListReady = action; // whenBooksListReady = delegation
+
+      this.getJSON().subscribe(data => {
+        this.data = data;
+        //console.log(this.books);
+        //this.whenBooksListReady(this.books);
+
+      // console.log(data.Books);
+      // console.log(this.books);
+      //console.log(this.book);
+
+
+    });
+
+
     }
 
   public getJSON(): Observable<any> {
@@ -84,25 +83,25 @@ export class BookService {
     return this.http.post('/books', book).map(data => data.toString());
   }
 
-  getBookIndexById(books: Array<any>, book: any) {
+  getBookIndexById(book: any) {
     let index = 0;
     //debugger;
-    for (; index < books.length; index++) {
-      if (books[index].Id === book.Id) {
+    for (; index < this.data.Books.length; index++) {
+      if (this.data.Books[index].Id === book.Id) {
         return index;
       }
     }
   }
 
-  deleteBook(books: Array<any>, book: any) {
+  deleteBook(book: any) {
 
-    const index = this.getBookIndexById(books, book); console.log(books, book, index);
+    const index = this.getBookIndexById(book); console.log(book, index);
 
     if (index > -1) {
-        books.splice(index, 1);
-        //console.log(this.books);
-    }
+      this.data.Books.splice(index, 1);
 
+    }
+    return this.data.Books;
     // return this.http.delete('/books/' + book.id).map(data => data.json()).toPromise();
   }
 

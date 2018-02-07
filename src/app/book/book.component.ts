@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Book } from './book';
 import { BookService } from './book.service';
+//import {PopupModule} from 'ng2-opd-popup';
 
 @Component({
   selector: 'app-book',
@@ -11,7 +12,7 @@ import { BookService } from './book.service';
 export class BookComponent implements OnInit {
 // book:Book;
   books;
-  constructor(private _bookService: BookService) {}
+  constructor(private _bookService: BookService, /*private popup:PopupModule*/) {}
 
   ngOnInit() {
     this._bookService.getJSON().subscribe(data => {
@@ -19,6 +20,9 @@ export class BookComponent implements OnInit {
   });
 }
 
+OpenDialog(){
+  //this.popup.show();
+}
 
 create(book: Book) {
     this.books.push(book);
