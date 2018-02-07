@@ -1,17 +1,15 @@
 <div class="row">
-  <div class="col-md-6">
+<div class="col-md-6">
 <app-books-list [books]="books"
 (deleteABookEvent)="delete($event)"
 (updateABookEvent)="update($event)">
 </app-books-list>
   </div>
-  <div>
-      <popup>
-          Wrong password please try again </popup>
-          <button (click)="openDialog()"> open popUp</button>
-      </div>
+  <!-- <div>
+      <popup>Wrong password please try again</popup>
+      <button (click)="OpenDialog()">open popUp</button>
+  </div> -->
 <div class="col-md-6">
 <app-new-book (createNewBookEvent)="create($event)"></app-new-book>
 </div>
 </div>
-
