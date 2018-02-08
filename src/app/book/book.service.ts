@@ -5,21 +5,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-// import { PopupModule } from 'ng2-opd-popup';
 
 @Injectable()
 export class BookService {
   book: Book;
   data;
   whenBooksListReady: Function;
-  // book;, public popup: PopupModule
   constructor(public http: HttpClient) {
 
-}
-// OpenDialog() {
-//     this.popup.show();
-//     }
-
+  }
   public createAbook(data): Book {
     const book = new Book();
     book.id = data['Id'];
@@ -40,17 +34,17 @@ export class BookService {
     this.books.push(newBook);
     }*/
 
-    /*public selectAllBooks() {
-      return this.books;
-    }*/
+  /*public selectAllBooks() {
+    return this.books;
+  }*/
 
-    public waitForBooksList(action: Function) { // waitForBooksList = function
-      this.whenBooksListReady = action; // whenBooksListReady = delegation
+  public waitForBooksList(action: Function) { // waitForBooksList = function
+    this.whenBooksListReady = action; // whenBooksListReady = delegation
 
-      this.getJSON().subscribe(data => {
-        this.data = data;
-        //console.log(this.books);
-        //this.whenBooksListReady(this.books);
+    this.getJSON().subscribe(data => {
+      this.data = data;
+      //console.log(this.books);
+      //this.whenBooksListReady(this.books);
 
       // console.log(data.Books);
       // console.log(this.books);
@@ -60,7 +54,7 @@ export class BookService {
     });
 
 
-    }
+  }
 
   public getJSON(): Observable<any> {
     return this.http.get('../assets/books-mock.json');
@@ -76,11 +70,6 @@ export class BookService {
     //     );
     //   });
     // });
-}
-
-  addBook(book: Book) {
-
-    return this.http.post('/books', book).map(data => data.toString());
   }
 
   getBookIndexById(book: any) {
@@ -93,24 +82,26 @@ export class BookService {
     }
   }
 
-  deleteBook(book: any) {
-
+  addBook(book: any) {
     const index = this.getBookIndexById(book); console.log(book, index);
-
     if (index > -1) {
-      this.data.Books.splice(index, 1);
-
+      this.data.Books.push(book);
+      console.log(this.data.books);
     }
     return this.data.Books;
-    // return this.http.delete('/books/' + book.id).map(data => data.json()).toPromise();
+  }
+  deleteBook(book: any) {
+    const index = this.getBookIndexById(book); console.log(book, index);
+    if (index > -1) {
+      this.data.Books.splice(index, 1);
+    }
+    return this.data.Books;
   }
 
   editBook(book: Book) {
     // return this.http.put('/books/' + book.id, book).map(data => data.json()).toPromise();
   }
 
-  getABook(book: Book) {
-    // return this.http.get('/books' + book.id).map(data => data.json()).toPromise();
-  }
+
 
 }

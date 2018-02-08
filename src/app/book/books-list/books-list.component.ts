@@ -15,15 +15,6 @@ export class BooksListComponent implements OnInit {
   constructor(private _bookService: BookService) { }
 
   ngOnInit() {
-   /* this._bookService.getJSON().subscribe(data => {
-    this.books = data.Books;
-    // let book = this._bookService.book;
-    //console.log(this.books);
-    //console.log(data);
-    // console.log(book);
-});*/
-
-//this.books = this._bookService.selectAllBooks();
 
 
 this._bookService.waitForBooksList((data) => {
@@ -35,7 +26,6 @@ this._bookService.waitForBooksList((data) => {
   delete(book: Book) {
     const result = confirm('Are You Sure You want to delete that book?');
     if (result) {
-    //this.deleteABookEvent.emit(book);
     this.books = this._bookService.deleteBook(book);
     }
   }
