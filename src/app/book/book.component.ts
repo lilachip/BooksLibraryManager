@@ -1,7 +1,8 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { Book } from './book';
 import { BookService } from './book.service';
-import {Popup} from 'ng2-opd-popup';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import {Dialog} from '../popUp/popUp.component';
 
 @Component({
   selector: 'app-book',
@@ -12,25 +13,25 @@ import {Popup} from 'ng2-opd-popup';
 export class BookComponent implements OnInit {
 // book:Book;
   books;
-  constructor(private _bookService: BookService, private popup:Popup) {}
-
+  dialogRef: MatDialogRef<Dialog>;
+  constructor(private _bookService: BookService, public dialog: MatDialog) {
+    // this.openDialog();
+  }
+  openDialog(){
+    this.dialogRef = this.dialog.open(Dialog);
+    this.dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+    });
+  }
   ngOnInit() {
     this._bookService.getJSON().subscribe(data => {
       this.books = data.Books;
   });
 }
 
-OpenDialog(){
-  this.popup.options={
-    color:'orange',
-   header:'Book details'
-  };
-
-  this.popup.show();
-}
-
 create(book: Book) {
-    this.books.push(book);
+  const i = this.books.indexOf(book);
+  this.books.push(book);
   }
   delete(book: Book) {
     const i = this.books.indexOf(book);

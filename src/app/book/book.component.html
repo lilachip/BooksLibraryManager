@@ -6,8 +6,7 @@
 </app-books-list>
   </div>
   <div>
-      <popup>Wrong password please try again</popup>
-      <button (click)="OpenDialog()">open popUp</button>
+      <button mat-raised-button (click)="openDialog()">Open dialog</button>
   </div>
 <div class="col-md-6">
 <app-new-book (createNewBookEvent)="create($event)"></app-new-book>

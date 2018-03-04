@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Book } from '../book';
 import { BookService } from '../book.service';
 
@@ -9,7 +9,7 @@ import { BookService } from '../book.service';
 })
 export class NewBookComponent implements OnInit {
   newBook = new Book();
-  books;
+  books = [];
   @Output() createNewBookEvent = new EventEmitter();
   constructor(private _bookService: BookService) {
     this._bookService.getJSON().subscribe(data => {
@@ -18,11 +18,20 @@ export class NewBookComponent implements OnInit {
   }
 
   ngOnInit() {
+    //this.create();
   }
   create(){
-    this.createNewBookEvent.emit(this.newBook);
-    this.newBook = new Book();
-this.books.push(this.newBook);
-    console.log(this.newBook);
-  }
+    this.newBook = {
+      id :'',
+      title:'',
+      author:'',
+      date:'',
+      editable:false,
+img:''
+    };
+    this.newBook = this._bookService.createAbook(Book);
+     this.books.push(this.newBook);
+   //  this._bookService.addBook(this.newBook);
+     console.log(this.newBook);
+   }
 }

@@ -9,24 +9,28 @@ import { NewBookComponent } from './book/new-book/new-book.component';
 import { EditBookComponent } from './book/edit-book/edit-book.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import {PopupModule} from 'ng2-opd-popup';
+import { MatDialogModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {Dialog} from './popUp/popUp.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    PopupModule.forRoot()
+    MatDialogModule,
+    BrowserAnimationsModule,
   ],
   declarations: [
     BookComponent,
     AppComponent,
+    Dialog,
     BooksListComponent,
     BookDetailsComponent,
     NewBookComponent,
     EditBookComponent
   ],
-
+  entryComponents: [ Dialog ],
   providers: [BookService],
   bootstrap: [AppComponent]
 })

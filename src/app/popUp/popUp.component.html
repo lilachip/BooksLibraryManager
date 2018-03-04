@@ -1,0 +1,9 @@
+<h3>Please Enter info</h3>
+<div>
+  <!-- <md-input-container> -->
+    <input mdInput type="text" #ncknm>
+  <!-- </md-input-container> -->
+</div>
+<div md-dialog-actions>
+<button md-button class="popup-btn" (click)="dialogRef.close({ncknm:ncknm.value})"></button>
+</div>

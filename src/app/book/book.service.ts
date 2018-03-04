@@ -10,19 +10,21 @@ import 'rxjs/add/operator/catch';
 export class BookService {
   book: Book;
   data;
+  addedBooks=[];
   whenBooksListReady: Function;
   constructor(public http: HttpClient) {
 
   }
-  public createAbook(data): Book {
-    const book = new Book();
-    book.id = data['Id'];
-    book.title = data['Title'];
-    book.author = data['Author'];
-    book.date = data['Date'];
-    book.img = data['Cover'];
-    book.editable = data['Editable'];
-    return book;
+  public createAbook(book): Book {
+    const newbook = new Book();
+    newbook.id = book['Id'];
+    newbook.title = book['Title'];
+    newbook.author = book['Author'];
+    newbook.date = book['Date'];
+    newbook.img = book['Cover'];
+    newbook.editable = book['Editable'];
+    this.addedBooks.push(newbook);
+    return newbook;
   }
   /*addBooks = function(data){
     let newBook = {
@@ -43,11 +45,14 @@ export class BookService {
 
     this.getJSON().subscribe(data => {
       this.data = data;
+      // tslint:disable-next-line:comment-format
       //console.log(this.books);
+      // tslint:disable-next-line:comment-format
       //this.whenBooksListReady(this.books);
 
       // console.log(data.Books);
       // console.log(this.books);
+      // tslint:disable-next-line:comment-format
       //console.log(this.book);
 
 
@@ -74,6 +79,7 @@ export class BookService {
 
   getBookIndexById(book: any) {
     let index = 0;
+    // tslint:disable-next-line:comment-format
     //debugger;
     for (; index < this.data.Books.length; index++) {
       if (this.data.Books[index].Id === book.Id) {
@@ -83,17 +89,17 @@ export class BookService {
   }
 
   addBook(book: any) {
-    const index = this.getBookIndexById(book); console.log(book, index);
-    if (index > -1) {
-      this.data.Books.push(book);
-      console.log(this.data.books);
-    }
+    this.createAbook(Book);
+    // const index = this.data.books.length + 1; console.log(book, index);
+    this.data.Books.push(book);
+    console.log(this.data.books);
     return this.data.Books;
   }
   deleteBook(book: any) {
     const index = this.getBookIndexById(book); console.log(book, index);
     if (index > -1) {
       this.data.Books.splice(index, 1);
+      console.log(this.data.books);
     }
     return this.data.Books;
   }
