@@ -1,14 +1,12 @@
 <div class="row">
-<div class="col-md-6">
-<app-books-list [books]="books"
-(deleteABookEvent)="delete($event)"
-(updateABookEvent)="update($event)">
-</app-books-list>
+  <div class="col-md-6">
+    <app-books-list [books]="books" (deleteABookEvent)="delete($event)" (updateABookEvent)="update($event)">
+    </app-books-list>
   </div>
   <div>
-      <button mat-raised-button (click)="openDialog()">Open dialog</button>
+    <button mat-raised-button (click)="openDialog()">Open dialog</button>
   </div>
-<div class="col-md-6">
-<app-new-book (createNewBookEvent)="create($event)"></app-new-book>
-</div>
+  <div class="col-md-6">
+    <app-new-book (createNewBookEvent)="create($event)"></app-new-book>
+  </div>
 </div>
