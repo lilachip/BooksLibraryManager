@@ -35,9 +35,7 @@ export class BooksListComponent {
     });
     this.dialogRef.afterClosed().subscribe(
       (result) => {
-        book.title = clone.title;
-        book.date = clone.date;
-        book.author = clone.author;
+        this._bookService.updateBook(clone);
       });
   }
 

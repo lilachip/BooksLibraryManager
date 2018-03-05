@@ -6,16 +6,16 @@ export class Book {
     public title: string = '',
     public author: string = '',
     public date: string = '',
-    public img: string = '',
+    public cover: string = '',
   ) {}
 
   static Clone(book: Book) {
     const newbook = new Book();
     newbook.author = book.author;
     newbook.date = book.date;
-    newbook.img = book.img;
+    newbook.cover = book.cover;
     newbook.title = book.title;
-    newbook.id = UUID.UUID();
+    newbook.id = book.id;
     return newbook;  
   }
 

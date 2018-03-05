@@ -38,10 +38,24 @@ export class BookService {
         return index;
       }
     }
+
+    console.warn("Could not find book:");
+    console.warn(book);
+    console.warn("full book list:");
+    console.warn(this.books);
+    return -1
   }
 
   addBook(book: Book) {
     this.books.push(book);
+  }
+
+  updateBook(book: Book){
+
+    const index = this.getBookIndexById(book); 
+    if (index > -1) {
+      this.books[index] = book;
+    }
   }
 
   deleteBook(book: any) {
