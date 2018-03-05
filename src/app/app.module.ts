@@ -4,9 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/library.component';
 import { BooksListComponent } from './book/books-list/books-list.component';
-import { BookDetailsComponent } from './book/book-details/book-details.component';
-import { NewBookComponent } from './book/new-book/new-book.component';
-import { EditBookComponent } from './book/edit-book/edit-book.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule, MatFormFieldModule, MatInputModule } from '@angular/material';
@@ -28,9 +25,6 @@ import {Dialog} from './popUp/popUp.component';
     AppComponent,
     Dialog,
     BooksListComponent,
-    BookDetailsComponent,
-    NewBookComponent,
-    EditBookComponent
   ],
   entryComponents: [ Dialog ],
   providers: [BookService],
