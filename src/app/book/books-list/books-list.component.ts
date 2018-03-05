@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material';
 import { Book } from '../book';
 import { BookService } from '../book.service';
@@ -9,21 +9,11 @@ import { Dialog } from '../../popUp/popUp.component';
   templateUrl: './books-list.component.html',
   styleUrls: ['./books-list.component.css']
 })
-export class BooksListComponent implements OnInit {
+export class BooksListComponent {
   @Input() books;
-  @Output() deleteABookEvent = new EventEmitter();
-  @Output() updateABookEvent = new EventEmitter();
   
   dialogRef: MatDialogRef<Dialog>;
   constructor(private _bookService: BookService, public dialog: MatDialog) { }
-
-  ngOnInit() {
-
-    this._bookService.waitForBooksList((data) => {
-      this.books = data.Books;
-      console.log(this.books);
-    });
-  }
 
   openAddDialog() {
     let book = this._bookService.createAbook();
@@ -55,7 +45,4 @@ export class BooksListComponent implements OnInit {
     }
   }
 
-  update(books) {
-    this.updateABookEvent.emit(books);
-  }
 }

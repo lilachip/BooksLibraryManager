@@ -12,7 +12,6 @@ export class BookService {
   book: Book;
   data;
   addedBooks=[];
-  whenBooksListReady: Function;
   constructor(public http: HttpClient) {
 
   }
@@ -23,18 +22,12 @@ export class BookService {
     return newbook;
   }
 
-  public waitForBooksList(action: Function) { // waitForBooksList = function
-    this.whenBooksListReady = action; // whenBooksListReady = delegation
-
-    this.getJSON().subscribe(data => {
+  public getJSON(): Observable<any> {
+    let observable = this.http.get('../assets/books-mock.json');
+    observable.subscribe(data => {
       this.data = data;
     });
-
-
-  }
-
-  public getJSON(): Observable<any> {
-    return this.http.get('../assets/books-mock.json');
+    return observable;
   }
 
   getBookIndexById(book: any) {
@@ -58,7 +51,7 @@ export class BookService {
     const index = this.getBookIndexById(book); console.log(book, index);
     if (index > -1) {
       this.data.Books.splice(index, 1);
-      console.log(this.data.books);
+      console.log(this.data.Books);
     }
     return this.data.Books;
   }

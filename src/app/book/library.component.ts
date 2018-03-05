@@ -19,18 +19,4 @@ export class BookComponent implements OnInit {
   });
 }
 
-create(book: Book) {
-  const i = this.books.indexOf(book);
-  this.books.push(book);
-  }
-  delete(book: Book) {
-    const i = this.books.indexOf(book);
-    this.books.splice(i, 1);
-  }
-
-  update(books: any) {
-    console.log(books);
-    const i = this.books.indexOf(books.original);
-    this.books[i] = books.edited;
-  }
 }
