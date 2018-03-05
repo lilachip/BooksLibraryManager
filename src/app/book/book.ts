@@ -1,5 +1,3 @@
-import { UUID } from 'angular2-uuid';
-
 export class Book {
   constructor(
     public id: string = '',

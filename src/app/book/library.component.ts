@@ -1,5 +1,4 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { Book } from './book';
 import { BookService } from './book.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class BookComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._bookService.getJSON().subscribe(books => {
+    this._bookService.getBooks().subscribe(books => {
       this.books = books;
     });
   }

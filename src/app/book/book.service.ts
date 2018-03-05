@@ -21,7 +21,7 @@ export class BookService {
     return newbook;
   }
 
-  public getJSON(): Observable<any> {
+  public getBooks(): Observable<any> {
     let observable = this.http.get('../assets/books-mock.json');
     
     return observable.map(data => {

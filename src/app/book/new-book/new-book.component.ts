@@ -12,7 +12,7 @@ export class NewBookComponent implements OnInit {
   books = [];
   @Output() createNewBookEvent = new EventEmitter();
   constructor(private _bookService: BookService) {
-    this._bookService.getJSON().subscribe(data => {
+    this._bookService.getBooks().subscribe(data => {
       this.books = data.Books;
     });
   }
