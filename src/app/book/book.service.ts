@@ -22,7 +22,6 @@ export class BookService {
     newbook.author = book['Author'];
     newbook.date = book['Date'];
     newbook.img = book['Cover'];
-    newbook.editable = book['Editable'];
     this.addedBooks.push(newbook);
     return newbook;
   }

@@ -16,8 +16,6 @@ export class EditBookComponent implements OnInit {
     Object.assign(this.bookEdit, this.book);
   }
   update() {
-    //disable edit again after editing
-    this.bookEdit.editable = false;
     //should change into book.id
     this.updateABookEvent.emit({ original: this.book, edited: this.bookEdit });
   }

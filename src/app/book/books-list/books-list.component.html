@@ -1,3 +1,4 @@
+<button mat-raised-button (click)="openAddDialog()">Add Book</button>
 <ul class="list-group">
     <li *ngFor="let book of books" class="list-group-item">
         <div class="row">
@@ -12,8 +13,7 @@
                 <span> {{ book.Date | date : "yyyy"}} </span>
                 <br>
                 <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
-                <span (click)="book.editable = !book.editable" class="glyphicon glyphicon-edit up"></span>
-                <app-edit-book [book]="book" (updateABookEvent)="update($event)" *ngIf="book.editable"></app-edit-book>
+                <span (click)="openEditDialog()" class="glyphicon glyphicon-edit up"></span>
             </div>
         </div>
     </li>

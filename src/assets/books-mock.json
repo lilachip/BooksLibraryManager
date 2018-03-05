@@ -5,64 +5,56 @@
       "Title" : "Adventures of Huckleberry",
       "Author" : "Rick Riordan",
       "Date": "1988",
-      "Cover": "../images/Adventures-of-Huckleberry-01.jpg",
-      "Editable": false
+      "Cover": "../images/Adventures-of-Huckleberry-01.jpg"
     },
     {
       "Id":"2",
       "Title":  "catch 22",
       "Author" : "Rick Riordan",
       "Date": "1908",
-      "Cover": "../images/catch-22-05.jpg",
-      "Editable": false
+      "Cover": "../images/catch-22-05.jpg"
     },
     {
       "Id":"3",
       "Title":  "what i'm talking when i'm talking about running",
       "Author" : "Haruki murakami",
       "Date": "1999",
-      "Cover": "images/Haruki-08.jpg",
-      "Editable": false
+      "Cover": "images/Haruki-08.jpg"
     },
     {
       "Id":"4",
       "Title": "lucene in action, second edition",
       "Author" : "Michael McCandless",
       "Date": "1998",
-      "Cover": "images/Joseph-Conrad-004.jpg",
-      "Editable": false
+      "Cover": "images/Joseph-Conrad-004.jpg"
     },
     {
       "Id":"5",
       "Title" : "Middlemarch",
       "Author" : "Rick Riordan",
       "Date": "1988",
-      "Cover": "images/Middlemarch--003.jpg",
-      "Editable": false
+      "Cover": "images/Middlemarch--003.jpg"
     },
     {
       "Id":"6",
       "Title":  "Roughing",
       "Author" : "Rick Riordan",
       "Date": "1908",
-      "Cover": "images/Roughing-007JPG.JPG",
-      "Editable": false
+      "Cover": "images/Roughing-007JPG.JPG"
     },
     {
       "Id":"7",
       "Title":  "Ulysses",
       "Author" : "Jostein Gaarder",
       "Date": "1999",
-      "Cover": "images/Ulysses-002.jpg",
-      "Editable": false
+      "Cover": "images/Ulysses-002.jpg"
     },
     {
       "Id":"8",
       "Title": "Wutherine-heights",
       "Author" : "Michael McCandless",
       "Date": "1998",
-      "Cover": "images/Wutherine-heights-06.jpg",
-      "Editable": false
+      "Cover": "images/Wutherine-heights-06.jpg"
     }
   ]
 }

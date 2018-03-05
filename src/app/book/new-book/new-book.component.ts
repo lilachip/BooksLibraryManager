@@ -26,7 +26,6 @@ export class NewBookComponent implements OnInit {
       title:'',
       author:'',
       date:'',
-      editable:false,
 img:''
     };
     this.newBook = this._bookService.createAbook(Book);
