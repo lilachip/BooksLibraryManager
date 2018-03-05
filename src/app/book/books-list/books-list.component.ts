@@ -30,12 +30,20 @@ export class BooksListComponent {
       });
   }
 
-  openEditDialog() {
-    this.dialogRef = this.dialog.open(Dialog);
+  openEditDialog(book: Book) {
+    let clone = Book.Clone(book);
+    console.log("editing:");
+    console.log(clone);
+    this.dialogRef = this.dialog.open(Dialog, {
+      data: clone
+    });
     this.dialogRef.afterClosed().subscribe(
       (result) => {
-        console.log("editing:");
-        console.log(result);
+        console.log("changing:");
+        console.log(clone);
+        book.title = clone.title;
+        book.date = clone.date;
+        book.author = clone.author;
       });
   }
 

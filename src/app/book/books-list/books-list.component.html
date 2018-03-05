@@ -10,10 +10,10 @@
                 <br>
                 <span> {{ book.author }} </span>
                 <br>
-                <span> {{ book.date | date : "yyyy"}} </span>
+                <span> {{ book.date }} </span>
                 <br>
                 <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
-                <span (click)="openEditDialog()" class="glyphicon glyphicon-edit up"></span>
+                <span (click)="openEditDialog(book)" class="glyphicon glyphicon-edit up"></span>
             </div>
         </div>
     </li>

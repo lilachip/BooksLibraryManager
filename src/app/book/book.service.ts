@@ -14,6 +14,7 @@ export class BookService {
   constructor(public http: HttpClient) {
 
   }
+
   public createBook(): Book {
     const newbook = new Book();
     newbook.id = UUID.UUID();
@@ -45,16 +46,14 @@ export class BookService {
   }
 
   deleteBook(book: any) {
-    const index = this.getBookIndexById(book); console.log(book, index);
+    const index = this.getBookIndexById(book); 
+    console.log(book, index);
+
     if (index > -1) {
       this.data.Books.splice(index, 1);
       console.log(this.data.Books);
     }
     return this.data.Books;
-  }
-
-  editBook(book: Book) {
-    // return this.http.put('/books/' + book.id, book).map(data => data.json()).toPromise();
   }
 
 }
