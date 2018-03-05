@@ -9,7 +9,7 @@ import { NewBookComponent } from './book/new-book/new-book.component';
 import { EditBookComponent } from './book/edit-book/edit-book.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { MatDialogModule } from '@angular/material';
+import { MatDialogModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {Dialog} from './popUp/popUp.component';
 
@@ -19,6 +19,8 @@ import {Dialog} from './popUp/popUp.component';
     FormsModule,
     HttpClientModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
     BrowserAnimationsModule,
   ],
   declarations: [

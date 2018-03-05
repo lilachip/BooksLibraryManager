@@ -26,9 +26,9 @@ export class NewBookComponent implements OnInit {
       title:'',
       author:'',
       date:'',
-img:''
+      img:''
     };
-    this.newBook = this._bookService.createAbook(Book);
+    //this.newBook = this._bookService.createAbook(Book);
      this.books.push(this.newBook);
    //  this._bookService.addBook(this.newBook);
      console.log(this.newBook);

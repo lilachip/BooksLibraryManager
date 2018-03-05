@@ -26,11 +26,16 @@ export class BooksListComponent implements OnInit {
   }
 
   openAddDialog() {
-    this.dialogRef = this.dialog.open(Dialog);
+    let book = this._bookService.createAbook();
+    this.dialogRef = this.dialog.open(Dialog,
+    {
+      data: book
+    });
+
     this.dialogRef.afterClosed().subscribe(
       (result) => {
         console.log("adding:");
-        console.log(result);
+        console.log(book);
       });
   }
 

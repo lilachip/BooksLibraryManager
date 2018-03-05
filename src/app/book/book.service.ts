@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import { UUID } from 'angular2-uuid';
 
 @Injectable()
 export class BookService {
@@ -15,13 +16,9 @@ export class BookService {
   constructor(public http: HttpClient) {
 
   }
-  public createAbook(book): Book {
+  public createAbook(): Book {
     const newbook = new Book();
-    newbook.id = book['Id'];
-    newbook.title = book['Title'];
-    newbook.author = book['Author'];
-    newbook.date = book['Date'];
-    newbook.img = book['Cover'];
+    newbook.id = UUID.UUID();
     this.addedBooks.push(newbook);
     return newbook;
   }
@@ -51,7 +48,7 @@ export class BookService {
   }
 
   addBook(book: any) {
-    this.createAbook(Book);
+    this.createAbook();
     // const index = this.data.books.length + 1; console.log(book, index);
     this.data.Books.push(book);
     console.log(this.data.books);

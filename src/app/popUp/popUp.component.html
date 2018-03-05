@@ -1,9 +1,15 @@
-<h3>Please Enter info</h3>
-<div>
-  <!-- <md-input-container> -->
-    <input mdInput type="text" #ncknm>
-  <!-- </md-input-container> -->
-</div>
-<div md-dialog-actions>
-<button md-button class="popup-btn" (click)="dialogRef.close({ncknm:ncknm.value})">Save</button>
-</div>
+<h2 mat-dialog-title>Book Info</h2>
+<mat-dialog-content>
+  <mat-form-field>
+    <input matInput [(ngModel)]="bookData.title" placeholder="Title">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="bookData.author" placeholder="Author">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="bookData.date" placeholder="Date">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>OK</button>
+</mat-dialog-actions>
