@@ -3,14 +3,14 @@
     <li *ngFor="let book of books" class="list-group-item">
         <div class="row">
             <div class="col-md-2">
-                <img class="img-responsive" src={{book.Cover}}/>
+                <img class="img-responsive" src={{book.cover}}/>
             </div>
             <div class="col-md-8">
-                <h4 class="capitalize"> {{book.Title }} </h4>
+                <h4 class="capitalize"> {{book.title }} </h4>
                 <br>
-                <span> {{ book.Author }} </span>
+                <span> {{ book.author }} </span>
                 <br>
-                <span> {{ book.Date | date : "yyyy"}} </span>
+                <span> {{ book.date | date : "yyyy"}} </span>
                 <br>
                 <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
                 <span (click)="openEditDialog()" class="glyphicon glyphicon-edit up"></span>

@@ -1,60 +1,60 @@
 {
   "Books": [
     {
-      "Id":"1",
-      "Title" : "Adventures of Huckleberry",
-      "Author" : "Rick Riordan",
-      "Date": "1988",
-      "Cover": "../images/Adventures-of-Huckleberry-01.jpg"
+      "id":"1",
+      "title" : "Adventures of Huckleberry",
+      "author" : "Rick Riordan",
+      "date": "1988",
+      "cover": "../images/Adventures-of-Huckleberry-01.jpg"
     },
     {
-      "Id":"2",
-      "Title":  "catch 22",
-      "Author" : "Rick Riordan",
-      "Date": "1908",
-      "Cover": "../images/catch-22-05.jpg"
+      "id":"2",
+      "title":  "catch 22",
+      "author" : "Rick Riordan",
+      "date": "1908",
+      "cover": "../images/catch-22-05.jpg"
     },
     {
-      "Id":"3",
-      "Title":  "what i'm talking when i'm talking about running",
-      "Author" : "Haruki murakami",
-      "Date": "1999",
-      "Cover": "images/Haruki-08.jpg"
+      "id":"3",
+      "title":  "what i'm talking when i'm talking about running",
+      "author" : "Haruki murakami",
+      "date": "1999",
+      "cover": "images/Haruki-08.jpg"
     },
     {
-      "Id":"4",
-      "Title": "lucene in action, second edition",
-      "Author" : "Michael McCandless",
-      "Date": "1998",
-      "Cover": "images/Joseph-Conrad-004.jpg"
+      "id":"4",
+      "title": "lucene in action, second edition",
+      "author" : "Michael McCandless",
+      "date": "1998",
+      "cover": "images/Joseph-Conrad-004.jpg"
     },
     {
-      "Id":"5",
-      "Title" : "Middlemarch",
-      "Author" : "Rick Riordan",
-      "Date": "1988",
-      "Cover": "images/Middlemarch--003.jpg"
+      "id":"5",
+      "title" : "Middlemarch",
+      "author" : "Rick Riordan",
+      "date": "1988",
+      "cover": "images/Middlemarch--003.jpg"
     },
     {
-      "Id":"6",
-      "Title":  "Roughing",
-      "Author" : "Rick Riordan",
-      "Date": "1908",
-      "Cover": "images/Roughing-007JPG.JPG"
+      "id":"6",
+      "title":  "Roughing",
+      "author" : "Rick Riordan",
+      "date": "1908",
+      "cover": "images/Roughing-007JPG.JPG"
     },
     {
-      "Id":"7",
-      "Title":  "Ulysses",
-      "Author" : "Jostein Gaarder",
-      "Date": "1999",
-      "Cover": "images/Ulysses-002.jpg"
+      "id":"7",
+      "title":  "Ulysses",
+      "author" : "Jostein Gaarder",
+      "date": "1999",
+      "cover": "images/Ulysses-002.jpg"
     },
     {
-      "Id":"8",
-      "Title": "Wutherine-heights",
-      "Author" : "Michael McCandless",
-      "Date": "1998",
-      "Cover": "images/Wutherine-heights-06.jpg"
+      "id":"8",
+      "title": "Wutherine-heights",
+      "author" : "Michael McCandless",
+      "date": "1998",
+      "cover": "images/Wutherine-heights-06.jpg"
     }
   ]
 }

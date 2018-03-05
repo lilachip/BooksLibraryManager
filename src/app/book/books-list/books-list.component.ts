@@ -16,7 +16,7 @@ export class BooksListComponent {
   constructor(private _bookService: BookService, public dialog: MatDialog) { }
 
   openAddDialog() {
-    let book = this._bookService.createAbook();
+    let book = this._bookService.createBook();
     this.dialogRef = this.dialog.open(Dialog,
     {
       data: book
@@ -26,6 +26,7 @@ export class BooksListComponent {
       (result) => {
         console.log("adding:");
         console.log(book);
+        this.books = this._bookService.addBook(book);
       });
   }
 

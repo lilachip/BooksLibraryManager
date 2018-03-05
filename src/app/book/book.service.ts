@@ -11,14 +11,12 @@ import { UUID } from 'angular2-uuid';
 export class BookService {
   book: Book;
   data;
-  addedBooks=[];
   constructor(public http: HttpClient) {
 
   }
-  public createAbook(): Book {
+  public createBook(): Book {
     const newbook = new Book();
     newbook.id = UUID.UUID();
-    this.addedBooks.push(newbook);
     return newbook;
   }
 
@@ -40,13 +38,12 @@ export class BookService {
     }
   }
 
-  addBook(book: any) {
-    this.createAbook();
-    // const index = this.data.books.length + 1; console.log(book, index);
+  addBook(book: Book) {
     this.data.Books.push(book);
-    console.log(this.data.books);
+    console.log(this.data.Books);
     return this.data.Books;
   }
+
   deleteBook(book: any) {
     const index = this.getBookIndexById(book); console.log(book, index);
     if (index > -1) {
