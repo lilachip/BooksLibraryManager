@@ -24,23 +24,17 @@ export class BooksListComponent {
 
     this.dialogRef.afterClosed().subscribe(
       (result) => {
-        console.log("adding:");
-        console.log(book);
-        this.books = this._bookService.addBook(book);
+        this._bookService.addBook(book);
       });
   }
 
   openEditDialog(book: Book) {
     let clone = Book.Clone(book);
-    console.log("editing:");
-    console.log(clone);
     this.dialogRef = this.dialog.open(Dialog, {
       data: clone
     });
     this.dialogRef.afterClosed().subscribe(
       (result) => {
-        console.log("changing:");
-        console.log(clone);
         book.title = clone.title;
         book.date = clone.date;
         book.author = clone.author;
@@ -50,7 +44,7 @@ export class BooksListComponent {
   delete(book: Book) {
     const result = confirm('Are You Sure You want to delete that book?');
     if (result) {
-      this.books = this._bookService.deleteBook(book);
+      this._bookService.deleteBook(book);
     }
   }
 

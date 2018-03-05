@@ -10,7 +10,7 @@ import { UUID } from 'angular2-uuid';
 @Injectable()
 export class BookService {
   book: Book;
-  data;
+  books;
   constructor(public http: HttpClient) {
 
   }
@@ -23,37 +23,33 @@ export class BookService {
 
   public getJSON(): Observable<any> {
     let observable = this.http.get('../assets/books-mock.json');
-    observable.subscribe(data => {
-      this.data = data;
+    
+    return observable.map(data => {
+      this.books = data["Books"];
+      return this.books;
     });
-    return observable;
   }
 
   getBookIndexById(book: any) {
     let index = 0;
     // tslint:disable-next-line:comment-format
-    for (; index < this.data.Books.length; index++) {
-      if (this.data.Books[index].Id === book.Id) {
+    for (; index < this.books.length; index++) {
+      if (this.books[index].id === book.id) {
         return index;
       }
     }
   }
 
   addBook(book: Book) {
-    this.data.Books.push(book);
-    console.log(this.data.Books);
-    return this.data.Books;
+    this.books.push(book);
   }
 
   deleteBook(book: any) {
-    const index = this.getBookIndexById(book); 
-    console.log(book, index);
 
+    const index = this.getBookIndexById(book); 
     if (index > -1) {
-      this.data.Books.splice(index, 1);
-      console.log(this.data.Books);
+      this.books.splice(index, 1);
     }
-    return this.data.Books;
   }
 
 }
