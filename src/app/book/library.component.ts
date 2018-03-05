@@ -5,9 +5,9 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 import {Dialog} from '../popUp/popUp.component';
 
 @Component({
-  selector: 'app-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.css']
+  selector: 'app-library',
+  templateUrl: './library.component.html',
+  styleUrls: ['./library.component.css']
 })
 
 export class BookComponent implements OnInit {
