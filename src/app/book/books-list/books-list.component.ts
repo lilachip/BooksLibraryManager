@@ -11,7 +11,7 @@ import { Dialog } from '../../popUp/popUp.component';
 })
 export class BooksListComponent {
   @Input() books;
-  
+
   dialogRef: MatDialogRef<Dialog>;
   constructor(private _bookService: BookService, public dialog: MatDialog) { }
 
@@ -40,7 +40,7 @@ export class BooksListComponent {
   }
 
   delete(book: Book) {
-    const result = confirm('Are You Sure You want to delete that book?');
+    const result = confirm('Are You Sure You want to delete '+book.title+'?');
     if (result) {
       this._bookService.deleteBook(book);
     }
