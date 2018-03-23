@@ -1,4 +1,4 @@
-<button mat-raised-button (click)="openAddDialog()">Add Book</button>
+<button title="Add New Book To Library" mat-raised-button (click)="openAddDialog()">Add Book</button>
 <ul class="list-group">
     <li *ngFor="let book of books" class="list-group-item">
         <div class="row">
@@ -12,9 +12,10 @@
                 <br>
                 <span> {{ book.date }} </span>
                 <br>
-                <span (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
-                <span (click)="openEditDialog(book)" class="glyphicon glyphicon-edit up"></span>
-            </div>
+                <span title="Delte This Book" (click)="delete(book)" class="glyphicon glyphicon-trash up"></span>
+                <span title="Edit This Book" (click)="openEditDialog(book)" class="glyphicon glyphicon-edit up"></span>
+              </div>
+              <!-- <div id="BookRow"></div>y -->
         </div>
     </li>
 </ul>

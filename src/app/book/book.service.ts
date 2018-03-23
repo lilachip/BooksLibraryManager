@@ -23,9 +23,9 @@ export class BookService {
 
   public getBooks(): Observable<any> {
     let observable = this.http.get('../assets/books-mock.json');
-    
+
     return observable.map(data => {
-      this.books = data["Books"];
+      this.books = data['Books'];
       return this.books;
     });
   }
@@ -43,7 +43,7 @@ export class BookService {
     console.warn(book);
     console.warn("full book list:");
     console.warn(this.books);
-    return -1
+    return -1;
   }
 
   addBook(book: Book) {
@@ -51,16 +51,14 @@ export class BookService {
   }
 
   updateBook(book: Book){
-
-    const index = this.getBookIndexById(book); 
+    const index = this.getBookIndexById(book);
     if (index > -1) {
       this.books[index] = book;
     }
   }
 
   deleteBook(book: any) {
-
-    const index = this.getBookIndexById(book); 
+    const index = this.getBookIndexById(book);
     if (index > -1) {
       this.books.splice(index, 1);
     }

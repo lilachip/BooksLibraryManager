@@ -35,3 +35,17 @@ h4{
   background: transparent;
   color: white;
 }
+.img-responsive, .dialog{
+  float:left;
+}
+.dialogDiv{
+  float: right;
+  margin-left: 30px;
+}
+/* .dialogBtn{
+  float: right;
+} */
+.glyphicon .glyphicon-trash:hover::after{
+content:"Delete a Book";
+}
+

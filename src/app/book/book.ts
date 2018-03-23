@@ -14,7 +14,7 @@ export class Book {
     newbook.cover = book.cover;
     newbook.title = book.title;
     newbook.id = book.id;
-    return newbook;  
+    return newbook;
   }
 
 }

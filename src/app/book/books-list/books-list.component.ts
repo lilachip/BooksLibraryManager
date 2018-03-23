@@ -11,7 +11,6 @@ import { Dialog } from '../../popUp/popUp.component';
 })
 export class BooksListComponent {
   @Input() books;
-
   dialogRef: MatDialogRef<Dialog>;
   constructor(private _bookService: BookService, public dialog: MatDialog) { }
 
@@ -27,7 +26,9 @@ export class BooksListComponent {
         this._bookService.addBook(book);
       });
   }
-
+//check how im inserting it to the specific opened item...
+// document.getElementById('BookRow').innerHTML = '<h1>Some Title</h1>';
+// console.log("im here");
   openEditDialog(book: Book) {
     let clone = Book.Clone(book);
     this.dialogRef = this.dialog.open(Dialog, {

@@ -1,15 +1,26 @@
-<h2 mat-dialog-title>Book Info</h2>
-<mat-dialog-content>
-  <mat-form-field>
-    <input matInput [(ngModel)]="bookData.title" placeholder="Title">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput [(ngModel)]="bookData.author" placeholder="Author">
-  </mat-form-field>
-  <mat-form-field>
-    <input matInput [(ngModel)]="bookData.date" placeholder="Date">
-  </mat-form-field>
-</mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>OK</button>
-</mat-dialog-actions>
+<!-- [formGroup]="form" (ngSubmit)="submit(form)" -->
+<form>
+  <h2 mat-dialog-title>Book Info</h2>
+  <mat-dialog-content>
+    <img class="img-responsive dialog" src="{{bookData.cover}}" alt="Missing book's cover"/>
+    <div class="dialogDiv">
+    <mat-form-field required>
+      <!-- formControlName="title" -->
+      <input matInput type="text" [(ngModel)]="bookData.title" placeholder="Title" name="Title">
+    </mat-form-field>
+    <mat-form-field required>
+      <!-- formControlName="author" -->
+      <input matInput type="text" [(ngModel)]="bookData.author" placeholder="Author" name="Author">
+    </mat-form-field>
+    <br>
+    <mat-form-field required>
+      <!-- formControlName="date" -->
+      <input matInput type="date" [(ngModel)]="bookData.date" placeholder="Date" name="Date">
+    </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+      <!-- <button mat-button mat-dialog-close>Cancel</button> -->
+    <button mat-button mat-dialog-close type="submit">OK</button>
+  </mat-dialog-actions>
+</form>
